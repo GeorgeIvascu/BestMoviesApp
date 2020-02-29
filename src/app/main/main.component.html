@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="tv-shows">
+      <h2>Top Movies According to IMDB</h2>
+      <button mat-fab (click)="getDataIMDB()">Show</button>
+      <div class="list">
+        <ol>
+          <li *ngFor="let movie of movieDataIMDB | slice: 0:100"><a href=# (click)="openMovie(movie)">{{movie.title}} {{movie.year}} {{movie.rating}}</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="movies">
+      <h2>Top Movies According to MetaCritic</h2>
+      <button mat-fab (click)="getDataRotten()">Show</button>
+      <div class="list">
+        <ol>
+          <li *ngFor="let movie of movieDataRotten | slice: 0:100"><a href=# (click)="openMovie(movie)">{{movie.title}} {{movie.year}} {{movie.rating}}</a></li>
+        </ol>
+      </div>
+    </div>
+</div>
